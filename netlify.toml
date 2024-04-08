@@ -1,5 +1,8 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "SAMEORIGIN"
-    Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline';
+      X-Frame-Options = "SAMEORIGIN"
+      Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'"
+      X-XSS-Protection = "1; mode=block"
+      X-Content-Type-Options = "nosniff"
+      Referrer-Policy = "same-origin"
